@@ -188,7 +188,44 @@ header ul li a:hover {
     color: var(--text-color);
 }
 
-/* Sobre 2*/
+/* Fotos*/
+
+.fotos {
+    position: relative;
+    width: 100%;
+    min-height: 80vh;
+    padding: 0px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    /*inverte a ordem da imagem com o texto*/
+}
+
+.fotos img {
+    width: 100%; 
+    max-width: 350px; 
+    height: auto;
+}
+
+.fotos .foto {
+    width: 50%;
+    margin: 20px;
+}
+
+.fotos .foto h2 {
+    font-size: 3em;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.fotos .foto p {
+    max-width: 600px;
+    text-align: justify;
+    color: var(--text-color);
+}
+
+/* Atualizações*/
 
 .update {
     position: relative;
@@ -198,7 +235,7 @@ header ul li a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: row-reverse;
+    flex-direction: row;
     /*inverte a ordem da imagem com o texto*/
 }
 
@@ -218,6 +255,8 @@ header ul li a:hover {
     text-align: justify;
     color: var(--text-color);
 }
+
+
 
 /* contato */
 
@@ -361,13 +400,23 @@ footer .info ul li a i:hover {
     .banner .bg .textobanner h2 {
         font-size: 2.5em;
     }
-    .sobre, .update {
+    .sobre .update {
         flex-direction: column;
         padding: 20px;
     }
     section .form {
         width: 100%;
     }
+    .fotos {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .update {
+        flex-direction: column;  
+        text-align: center;
+    }
+
 }
 
 /* Responsividade */
@@ -435,6 +484,7 @@ footer .info ul li a i:hover {
     .sobre {
         flex-direction: column;
     }
+
     .sobre .textobanner {
         width: 100%;
     }
