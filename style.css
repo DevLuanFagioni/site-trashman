@@ -1,0 +1,465 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+
+.botao {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+:root {
+    --bg-color: #050e2d;
+    --second-bg-color: #1b2141;
+    --text-color: white;
+}
+
+body {
+    background: var(--bg-color);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--second-bg-color);
+    transition: 0.5s;
+    z-index: 1000;
+    height: 80px;
+}
+
+
+
+header .logo {
+    position: relative;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: 700;
+    transition: 0.3s ease-in-out;
+}
+
+header .logo:hover {
+    transform: scale(1.2);
+}
+
+span {
+    background: linear-gradient(270deg,
+            #f1dc19,
+            #d02718);
+    background-clip: text;
+    color: transparent;
+}
+
+header .nav {
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li {
+    list-style: none;
+    margin: 10px;
+}
+
+header ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 20px 15px;
+    border-radius: 20px;
+    font-size: 1.0em;
+    font-weight: normal;
+    transition: 0.3s ease-in-out;
+    display: inline-block;
+}
+
+header ul li a:hover {
+    transform: scale(1.0);
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* Banner */
+
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 80vh;
+    padding: 10px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .bg img {
+    object-fit: cover;
+    animation: floatImage 4s ease-in-out infinite;
+    transition: 0.4s ease;
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-2.4rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.banner .bg {
+    position: relative;
+    width: 100%;
+    min-width: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .bg .textobanner {
+    width: 50%;
+    height: 100%;
+}
+
+.banner .bg .textobanner h1 {
+    font-size: 4em;
+    color: var(--text-color);
+    letter-spacing: 4px;
+}
+
+.banner .bg .textobanner h2 {
+    font-size: 3em;
+    color: var(--text-color);
+    letter-spacing: 2px;
+}
+
+.banner .bg .textobanner p {
+    font-size: 1em;
+    color: var(--text-color);
+    letter-spacing: 2px;
+}
+
+.banner .bg {
+    width: 600px;
+}
+
+/* Sobre 1 */
+
+.sobre {
+    position: relative;
+    width: 100%;
+    min-height: 80vh;
+    padding: 0px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sobre .sobrejogo {
+    width: 50%;
+    margin: 20px;
+}
+
+.sobre .sobrejogo h2 {
+    font-size: 3em;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.sobre .sobrejogo p {
+    max-width: 600px;
+    text-align: justify;
+    color: var(--text-color);
+}
+
+/* Sobre 2*/
+
+.update {
+    position: relative;
+    width: 100%;
+    min-height: 80vh;
+    padding: 0px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    /*inverte a ordem da imagem com o texto*/
+}
+
+.update .updates {
+    width: 50%;
+    margin: 20px;
+}
+
+.update .updates h2 {
+    font-size: 3em;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.update .updates p {
+    max-width: 600px;
+    text-align: justify;
+    color: var(--text-color);
+}
+
+/* contato */
+
+section {
+    padding: 20px 100px;
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section img {
+
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+section .form {
+    width: 50%;
+    margin: 30px;
+}
+
+section .form h1 {
+    color: var(--text-color);
+}
+
+section .form .inputBox {
+    margin: 10px 0;
+}
+
+section .form .inputBox p {
+    color: var(--text-color);
+}
+
+section .form .inputBox input,
+section .form .inputBox textarea {
+    border: none;
+    outline: none;
+    padding: 5px;
+    width: 100%;
+    color: var(--text-color);
+    background: var(--second-bg-color);
+    min-height: 15px;
+    font-size: 1.1em;
+    resize: none;
+}
+
+.botao {
+    padding: 15px 30px;
+    border-radius: 10px;
+    border: 0;
+    background-color: rgb(255, 56, 86);
+    letter-spacing: 1.5px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    box-shadow: rgb(201, 46, 70) 0px 10px 0px 0px;
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+}
+
+.botao:hover {
+    box-shadow: rgb(201, 46, 70) 0px 7px 0px 0px;
+    transform: translateY(3px);
+}
+
+.botao:active {
+    background-color: rgb(255, 56, 86);
+    /*50, 168, 80*/
+    box-shadow: rgb(201, 46, 70) 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 200ms;
+}
+
+
+/* footer */
+
+footer {
+    width: 100%;
+    padding: 10px 80px;
+    background: var(--second-bg-color);
+    height: 80px;
+}
+
+footer .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .info .logo {
+    position: relative;
+    color: var(--text-color);
+    font-size: 2em;
+    font-weight: 700;
+    transition: 0.3s ease-in-out;
+}
+
+footer .info .logo:hover {
+    transform: scale(1.2);
+}
+
+footer .info p {
+    color: var(--text-color);
+}
+
+footer .info ul {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .info ul li {
+    list-style: none;
+    height: 50px;
+    width: 50px;
+    margin: 0px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .info ul li a i {
+    font-size: 2em;
+    color: var(--text-color);
+    transition: transform 0.3s ease-in-out;
+}
+
+footer .info ul li a i:hover {
+    transform: scale(1.2);
+}
+
+/* Responside Design */
+
+@media (max-width: 768px) {
+    header {
+        padding: 10px 20px;
+    }
+    .banner .bg .textobanner h2 {
+        font-size: 2.5em;
+    }
+    .sobre, .update {
+        flex-direction: column;
+        padding: 20px;
+    }
+    section .form {
+        width: 100%;
+    }
+}
+
+/* Responsividade */
+
+@media (max-width: 991px)
+{
+    header
+    {
+        padding: 15px 40px;
+    }
+    header .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--bg-color);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        z-index: 1000;
+    }
+    header .nav.active {
+        display: flex;
+    }
+    header .nav li {
+        margin: 20px 0;
+    }
+    header .nav li a {
+        font-size: 24px;
+        margin: 10px 0;
+    }
+    .toggleMenu {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        background: url(img/menu.png);
+        background-position: center;
+        background-size: 30px;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        z-index: 1001;
+    }
+    .toggleMenu.active {
+        background: url(img/close.png);
+        background-position: center;
+        background-size: 30px;
+        background-repeat: no-repeat;
+    }
+    .banner .bg img {
+        position: absolute;
+    }
+    .banner .bg .textobanner {
+        width: 50%;
+        height: 100%;
+        background: rgb(27 33 65 / 50%);
+        padding: 35px;
+        z-index: 1;
+        border-radius: 20px;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+    }
+    .sobre {
+        flex-direction: column;
+    }
+    .sobre .textobanner {
+        width: 100%;
+    }
+    .contato {
+        flex-direction: column;
+    }
+    .contato img {
+        height: 100%;
+        width: 100%;
+    }
+    .contato .form {
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+    .contato .inputBox {
+        flex-direction: column;
+        display: flex;
+        align-items: start;
+    }
+    .contato .form h1 {
+        text-align: center;
+    }
+    footer .info {
+        flex-direction: column;
+    }
+}
+
